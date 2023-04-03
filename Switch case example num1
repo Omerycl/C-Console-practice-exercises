@@ -1,0 +1,46 @@
+
+using System;
+class HelloWorld {
+  static void Main() {
+    
+//Mesleğine göre aldığı en düşük en ffazla maaşı hesaplayan program
+
+
+// Meslekler: Ogretmen doktor muhendis şoför hemşire futbolcu
+
+
+string meslek;
+Console.WriteLine("Lütfen mesleğinizi giriniz.");
+meslek = Console.ReadLine();
+
+switch (meslek)
+{
+    case "ogretmen":
+    Console.WriteLine("3500-5500 arası maaş");
+    break;
+    case "doktor":
+    Console.WriteLine("7500-9000 arası maaş");
+    break;
+     case "mühendis":
+    Console.WriteLine("7500-8000 arası maaş");
+    break;
+     case "şoför":
+    Console.WriteLine("4000-6000 arası maaş");
+    break;
+     case "hemşire":
+    Console.WriteLine("10000-9000 arası maaş");
+    break;
+     case "futbolcu":
+    Console.WriteLine("100000-900000 arası maaş");
+    break;
+    
+   default:
+    Console.WriteLine("Mesleğiniizin maaşı bilinmemektedir.");
+    break;
+}
+    
+    Console.ReadLine();
+ 
+    
+  }
+}
