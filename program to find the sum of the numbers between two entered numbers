@@ -1,0 +1,21 @@
+   // iki sayıarasındaki sayıların tooplamını veren program
+   
+   
+   int sayi1, sayi2;
+   Console.WriteLine("Lütfen 1. sayıyı giriniz.");
+   sayi1 = int.Parse(Console.ReadLine());
+   Console.WriteLine("Lütfen 2. sayıyı giriniz.");
+   sayi2 = int.Parse(Console.ReadLine());
+   int orijinalsayi = sayi1;
+   int donguSayisi = sayi2 - sayi1 + 1;
+   int toplam =0;
+   while (donguSayisi>0)
+   {
+       toplam += sayi1;
+       sayi1++;
+       donguSayisi--;
+       
+       // toplam += sayi2; sayi2++;
+   }
+   Console.WriteLine(" {0} -{1} sayıları arasındaki sayıların toplamı = {2}",orijinalsayi, sayi1, sayi2, toplam);
+   
