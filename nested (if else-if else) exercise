@@ -1,0 +1,70 @@
+using System.IO;
+using System;
+class Program
+{
+    static void Main()
+    {
+         int yas;
+        
+        
+        
+        /*  0-3 bebek
+            3-7 bebekten sonraki 
+            7-14çocukluk
+            14-18 ergenlik
+            18-25 gençlik
+            25-40 orta yas
+            40-55 orta yas üstü
+            55- yaşlılık            */
+        
+       
+       
+       Console.WriteLine("lütfen yaşınızı giriniz.");
+       yas = int.Parse(Console.ReadLine ());
+        if (yas>=18)
+        {
+            if(yas >55)
+            {
+               Console.WriteLine("yaşlısın.");
+            }
+             else if (yas > 40)
+            {
+                    Console.WriteLine("orta yaş üstündesin.");
+            }
+            else if (yas > 25)
+            {
+                 Console.WriteLine("Orta yaşlardasın.");
+            }
+           else
+           {
+               Console.WriteLine("gençlik çağındasın.");
+           }
+        }
+        else
+        {
+            if (yas<3)
+            {
+                 Console.WriteLine("bebeksin.");
+            }
+            else if(yas < 7)
+            {
+                 Console.WriteLine("bebeklikten sonraki ara zamandasın");
+            }
+            else if (yas < 14)
+            {
+                 Console.WriteLine("çocuksun");
+            }
+            else
+            {
+                 Console.WriteLine("Ergensin :( ");
+            }
+            
+            
+
+            
+        }
+          
+        
+    
+    }
+}
