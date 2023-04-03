@@ -1,0 +1,51 @@
+ // -----------UDEMY DERS KODLARI BAŞLANGI.---------------------------------
+ 
+ // Mini bir oyun yapacağız
+ // --ANALİZİMİZ--
+  //Toplama işlemini öğretmeye çalışan bir oyun yapacağız.
+ /* Oyun başladığı zaman rastgele 2 tane1-100 arasında sayı tutulacak, tutulan 
+ sayıların toplamı nedir diye sorulacaktır. Eğer Kullanıcı doğru cevap verirse "Tebrikler bildiniz" değilse "üzgünüm sop"
+ tekrar oynama kistoyr musunuz e/E ? şeklinde sorular sorulacak kullancı e veya E ile karşılık verirse oyun 
+ tekrar başlayacaktır. Kullanıcın puanı her doğru cevap için 5 puan artacak her yanlış cevap için 2 puan azalacaktır.
+ Oyun sonlandığında kullanıcının verdiği doğru cevap sayısı yanlış cevap sayısı ve puanı ekranda listelenmelidirç
+ Bu işlemleri yapan programın kodlarını yazalım*/
+ 
+ /* When the game is found, 2 random numbers between 1-100 will be kept, no restriction
+ You will be asked what is the sum of the sum. If the user answers correctly, don't do "Congratulations, you know" and "sorry sop"
+ replay kitoyr e/E ? If the user who will be asked the questions in the form of answers with an e or an E, the game will be played.
+ will start again. User score will increase by 5 points for each correct answer and decrease by 2 points for each incorrect answer.
+ The number of correct answers, the number of wrong answers and the score they used the last time they used the game should be listed on the screen.
+ Let's write the codes that make the programs that do these operations */
+ 
+      int toplam, puan=0, dogruCevapSayisi=0, yanlisCevapSayisi=0;
+        char devamMi;
+        do {
+            Random rastgele = new Random();
+            int sayi1 = rastgele.Next(1,101);
+            int sayi2 = rastgele.Next(1,101);
+            toplam = sayi1 + sayi2;
+            Console.WriteLine($"tutulan ilk sayı {sayi1} tutulan ikinci sayı {sayi2}");
+            Console.WriteLine("Bu sayıların toplamı nedir?");
+            int kullaniciToplam = int.Parse (Console.ReadLine());
+            if(kullaniciToplam == toplam) {
+                dogruCevapSayisi++;
+                puan += 5;
+                Console.WriteLine("tebrikler bildiniz");
+
+            } else {
+                yanlisCevapSayisi--;
+                puan -= 2;
+                Console.WriteLine("Üzgünüm bilemediniz");
+            }
+            Console.WriteLine("Tekrar oynamak ister misiniz 'e/E'");
+            devamMi = char.Parse(Console.ReadLine());
+
+
+
+
+
+        } while(devamMi == 'e' || devamMi == 'E');
+
+        Console.WriteLine("Doğru cevap sayısı : {0}", dogruCevapSayisi);
+        Console.WriteLine("yanlış cevap sayısı: {0}", yanlisCevapSayisi);
+        Console.WriteLine("Puan : {0}", puan);
