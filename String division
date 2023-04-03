@@ -1,0 +1,12 @@
+string isimler="Ali Veli Ayşe Fatma";
+string[] isimlerDizi = isimler.Split(' ');
+foreach (var item in isimlerDizi)
+{
+Console.WriteLine(item);
+}
+string cumle = "Merhaba Ali,bugün okulda çok önemli bir ders var.Bu derse katıl.";
+string[] kelime = cumle.Split(' ',',','.');
+foreach (var eleman in kelime)
+{
+Console.WriteLine(eleman);
+}
