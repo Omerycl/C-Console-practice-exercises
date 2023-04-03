@@ -1,0 +1,65 @@
+
+using System;
+class HelloWorld {
+  static void Main() {
+    
+    int ay;
+    ay =1;
+    Console.WriteLine("Lütfen bir sayı giriniz.");
+    ay = int.Parse(Console.ReadLine());
+    switch(ay)
+    {
+        case 1:
+        Console.WriteLine("Ocak");
+        break;
+        case 2:
+        Console.WriteLine("Şubat");
+        break;
+        case 3:
+        Console.WriteLine("mart");
+        break;
+        case 4:
+        Console.WriteLine("nisan");
+        break;
+        case 5:
+        Console.WriteLine("mayıs");
+        break;
+        case 6:
+        Console.WriteLine("haziran");
+        break;
+        case 7:
+        Console.WriteLine("temmuz");
+        break;
+        case 8:
+        Console.WriteLine("ağustos");
+        break;
+        case 9:
+        Console.WriteLine("eylül");
+        break;
+        case 10:
+        Console.WriteLine("ekim");
+        break;
+        case 11:
+        Console.WriteLine("kasım");
+        break;
+        case 12:
+        Console.WriteLine("aralık");
+        break;
+        default:
+        Console.WriteLine("Lütfen 1 ile 12 arasında değer giriniz.");
+        break;
+    }
+    
+    
+    Console.ReadLine();
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  }
+}
