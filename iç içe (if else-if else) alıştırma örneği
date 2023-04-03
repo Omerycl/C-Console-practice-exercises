@@ -1,0 +1,82 @@
+
+using System.IO;
+using System;
+
+class Program
+{
+    static void Main()
+    {
+           int a,b,c,d, buyuk;
+           
+
+        a = 75;  
+        b= 86;
+        c = 45;
+        d = 11; 
+
+     if (a > b) //a
+     
+     {
+         if(c > d) //c
+         {
+             if(a > c) //a
+             {
+                 buyuk = a;
+             }
+             else //c
+             {
+                 buyuk = c;
+                 
+             }
+         }
+         else //d
+         {
+            if (a > d)
+            {
+                buyuk = a;
+            }
+            else
+            {
+                buyuk = d;
+            }
+         }
+     } //ilk if iç içesi
+     
+     
+     else //b
+    {
+         if(c > d) //c
+         {
+             if (b > c)
+             {
+                 buyuk =b;
+             }
+             else
+             {
+                 buyuk =c;
+             }
+             
+         } //d
+         else
+         {
+             if(b > d)
+             {
+                 buyuk =b;
+             }
+             else
+             {
+                 buyuk = d;
+             }
+         }
+     }
+     
+     
+     buyuk =Math.Max(a, b);
+     buyuk = Math.Max(buyuk, c);
+     buyuk = Math.Max(buyuk, d);
+     Console.WriteLine(buyuk);
+      
+    
+ 
+    }
+}
