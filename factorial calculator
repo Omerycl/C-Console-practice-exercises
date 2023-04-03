@@ -1,0 +1,25 @@
+         int sayi;
+         while(true)
+         {
+             
+         
+         Console.WriteLine("Lütfen faktoriyelini almak istediğiniz sayıyı giriniz.");
+         sayi = int.Parse(Console.ReadLine());
+         //5*4*3*2*1
+         int orijinalSayi = sayi;
+         int sonuc = 1; //çarpmada 0 sayısı yutan eleman olduğu için 1e eşitlemek gerek.
+        if (sayi >=0)
+	{ 
+	 while(sayi>0)
+         {
+             sonuc *= sayi;
+             sayi--;
+             
+         }
+         Console.WriteLine(orijinalSayi + "! =" + sonuc);
+         }
+	else
+	{
+	Console.WriteLine ("Lütfen 0 veya 0'dan büyük bir sayı gir.);	
+	}
+   
